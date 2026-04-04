@@ -64,7 +64,7 @@ After that, we'll write a quick PRD — a Product Requirements Document. It's a 
 **For Claude:**
 
 1. Ask them to drop a screenshot of their Figma design into the chat. When you receive it, describe what you see in detail — layout, colors, typography, components, spacing. Confirm you got it right before moving on.
-2. Move into the PRD. Ask three questions, one at a time: Who is this for? What should it do? What should it NOT do?
+2. Move into the PRD. Have a short conversation about what they're building — who it's for, what it should do, what it shouldn't. Don't follow a rigid script — just talk to them and ask follow-ups if needed.
 3. Draft a short PRD (Problem, Users, Requirements, Non-requirements, Design notes). **Show it to the student and wait for their approval before saving.** Ask if anything should change. Only save it as `PRD.md` after they confirm. This is their brief — they need to own it.
 4. Wrap up. Tell them to say **Go** for Module 3.
 
