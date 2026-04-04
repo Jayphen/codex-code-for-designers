@@ -60,7 +60,7 @@ What's one thing that bothers you? Not a redesign. One thing. Fix it, ship it. T
 
 **For Claude:**
 
-Ask what one thing bothers them. Fix it. Ask if they want to ship it.
+Before asking what to fix, mention what other data is available from the API they're already using — wind speed, humidity, UV index, sunrise/sunset, hourly forecasts. And that Open-Meteo is just one of thousands of free APIs. Plant the seed for what else they could build. Then ask what one thing bothers them. Fix it.
 
 ---
 
