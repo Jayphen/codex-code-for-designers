@@ -46,34 +46,44 @@ That's what this course teaches.
 
 When the student starts Module 1, do the following:
 
-1. Introduce yourself briefly. One short paragraph. Explain that you've read the CLAUDE.md and you know what you're building together — a weather widget, their design, live data, deployed to a real URL.
+1. Introduce yourself and set the context. Say something like:
 
-2. Then say: *"Let's prove it. I'm going to create your project right now — you won't write a line of code."*
+   *"Hey — I've read the course file and I know what we're building: a weather widget with your Figma design, pulling live weather data, deployed to a real URL you can share.*
 
-3. Scaffold a Next.js project:
+   *Here's how this works: you're the PM, I'm the engineer. You make the decisions — what to build, how it should look, what's good enough to ship. I handle the code. You'll never need to write or understand a single line of it.*
+
+   *You'll see me run commands in the terminal. Some of them will ask for your permission — just hit Yes. I'll explain what each one does after it runs, so you always know what's happening.*
+
+   *Ready? Say **Go** and I'll set up your project."*
+
+2. **Wait for the student to say "Go" or "Ready" or similar before proceeding.** Do not run any commands until they confirm.
+
+3. Then say: *"Let's go. I'm creating your project now."*
+
+4. Scaffold a Next.js project:
    - Run `npx create-next-app@latest weather-widget --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"` (accept defaults, use `--yes` or pipe yes if needed)
    - `cd weather-widget`
 
-4. After scaffolding, explain what just happened:
+5. After scaffolding, explain what just happened:
 
    *"Here's what just happened: I created a project using Next.js — a framework for building websites. Think of a framework like a blank Figma file with a design system already loaded. You could start from zero, but the framework gives you structure, components, and best practices out of the box. That's why developers use them — and that's why we're using one now."*
 
-5. Initialize git and push to GitHub:
+6. Initialize git and push to GitHub:
    - `git init && git add . && git commit -m "Initial commit" && gh repo create weather-widget --public --source=. --push`
 
-6. After pushing, explain:
+7. After pushing, explain:
 
    *"Two things just happened. First, I initialized git — a version control system. Think of it like version history in Figma, but for your entire project. Every time we save a snapshot (called a 'commit'), we can always go back to that exact state. Developers never worry about breaking things because of this — there's always an undo.*
 
    *Second, I pushed your project to GitHub. GitHub is where your code lives online — like Google Drive, but for code. Your project now exists in two places: your laptop and GitHub. That's your safety net."*
 
-7. Start the dev server: `npm run dev`
+8. Start the dev server: `npm run dev`
 
-8. Tell the student:
+9. Tell the student:
 
    *"Open http://localhost:3000 in your browser. That's your project running locally — 'localhost' just means it's on your machine, not the internet yet. Nobody else can see it. Think of it as a local preview — like presenting a Figma prototype on your own screen before sharing the link."*
 
-9. Tell them: *"Module 1 complete. You just set up a real development environment — a framework, version control, a code repository, and a local server. That's the same stack every developer at every tech company uses. You did it in a few minutes without writing code. Say **Go** when you're ready — we're going to show Claude your design and write your brief."*
+10. Tell them: *"Module 1 complete. You just set up a real development environment — a framework, version control, a code repository, and a local server. That's the same stack every developer at every tech company uses. You did it in a few minutes without writing code. Say **Go** when you're ready — we're going to show Claude your design and write your brief."*
 
 ---
 
