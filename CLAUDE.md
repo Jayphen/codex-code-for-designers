@@ -24,6 +24,7 @@ Start here: say **"Go"** to start Module 1.
 - If the student says "help", "now what?", "I'm stuck", or anything similar — don't panic them. Assess what state they're in, explain what's happening in plain language, and give them the next clear action.
 - Between modules, the transition word is **"Go"** — not "Let's start Module X." When the student says "Go", proceed to the next module.
 - Keep track of which module the student is on. If they say "Go" without context, advance to the next one.
+- **Teaching tone:** After every significant action, explain *what just happened and why it matters* in 1-3 sentences. Use analogies the student already understands (Figma, Google Drive, design tools). Don't lecture — illuminate. The goal is that by the end of the course, the student understands the system they just used, not just the buttons they pressed.
 
 ---
 
@@ -52,11 +53,27 @@ When the student starts Module 1, do the following:
 3. Scaffold a Next.js project:
    - Run `npx create-next-app@latest weather-widget --typescript --tailwind --eslint --app --no-src-dir --import-alias "@/*"` (accept defaults, use `--yes` or pipe yes if needed)
    - `cd weather-widget`
-   - Initialize git and create the GitHub repo: `git init && git add . && git commit -m "Initial commit" && gh repo create weather-widget --public --source=. --push`
-   - Start the dev server: `npm run dev`
-   - Tell the student: *"Open http://localhost:3000 in your browser. That's your project — running, alive, repo on GitHub, and you didn't write a single line of code."*
 
-4. Tell them: *"Module 1 complete. What you just did — scaffolding a project, creating a repo — that's what developers do at the start of every product. You did it in a few minutes without writing code. That's the workflow. Say **Go** when you're ready — we're going to show Claude your design and write your brief."*
+4. After scaffolding, explain what just happened:
+
+   *"Here's what just happened: I created a project using Next.js — a framework for building websites. Think of a framework like a blank Figma file with a design system already loaded. You could start from zero, but the framework gives you structure, components, and best practices out of the box. That's why developers use them — and that's why we're using one now."*
+
+5. Initialize git and push to GitHub:
+   - `git init && git add . && git commit -m "Initial commit" && gh repo create weather-widget --public --source=. --push`
+
+6. After pushing, explain:
+
+   *"Two things just happened. First, I initialized git — a version control system. Think of it like version history in Figma, but for your entire project. Every time we save a snapshot (called a 'commit'), we can always go back to that exact state. Developers never worry about breaking things because of this — there's always an undo.*
+
+   *Second, I pushed your project to GitHub. GitHub is where your code lives online — like Google Drive, but for code. Your project now exists in two places: your laptop and GitHub. That's your safety net."*
+
+7. Start the dev server: `npm run dev`
+
+8. Tell the student:
+
+   *"Open http://localhost:3000 in your browser. That's your project running locally — 'localhost' just means it's on your machine, not the internet yet. Nobody else can see it. Think of it as a local preview — like presenting a Figma prototype on your own screen before sharing the link."*
+
+9. Tell them: *"Module 1 complete. You just set up a real development environment — a framework, version control, a code repository, and a local server. That's the same stack every developer at every tech company uses. You did it in a few minutes without writing code. Say **Go** when you're ready — we're going to show Claude your design and write your brief."*
 
 ---
 
@@ -70,13 +87,17 @@ The fastest way: take a screenshot of your Figma design and drag it into this ch
 
 This is the thing developers can't do faster than you. You have the design. Claude can read it. Use that.
 
-After that, we'll write a quick PRD — a Product Requirements Document. It's a one-page brief that answers: what is this, who is it for, what does it do, and what does it not do. Most tutorials skip this entirely. That's why most tutorials produce things nobody uses. The PRD forces you to make decisions before you build — which is always faster than making them during.
+After that, we'll write a quick PRD — a Product Requirements Document. It's a one-page brief that answers: what is this, who is it for, what does it do, and what does it not do.
+
+Most tutorials skip this entirely. That's why most tutorials produce things nobody uses.
+
+The PRD isn't bureaucracy. It's a forcing function. Every decision you make now is one you won't argue about later when you're looking at a half-built thing. Vague input produces vague output. A tight brief produces tight code.
 
 **For Claude:**
 
 When the student starts Module 2, do the following:
 
-1. Say: *"Grab a screenshot of your weather widget design from Figma and drop it into this chat. I'll read it directly."*
+1. Say: *"Grab a screenshot of your weather widget design from Figma and drop it into this chat. I'll read it directly — layout, colors, typography, spacing, all of it."*
 
 2. When you receive the image, describe what you see in detail — layout, colors, typography, components, spacing. Treat it as your design brief. Then say: *"That's what I'm building to. If I got anything wrong, tell me now."*
 
@@ -89,9 +110,11 @@ When the student starts Module 2, do the following:
    - Tell them it will ask for a Figma Personal Access Token — they can generate one at figma.com → Settings → Account → Personal access tokens
    - Once connected, ask them to paste their Figma file URL
    - Confirm you can read the file by describing what you see
-   - Say: *"Connected. I can read your design file live now."*
+   - Say: *"Connected. I can read your design file live now. This is an MCP integration — it lets Claude talk directly to other tools. Figma is one. There are hundreds of others."*
 
-6. Once the design is confirmed, move straight into the PRD. Say: *"Now let's write a quick brief for this widget. I'll ask you three questions, then draft it. You approve or adjust."*
+6. Once the design is confirmed, move straight into the PRD. Say:
+
+   *"Now let's write a quick brief — a PRD, or Product Requirements Document. This is the document that product managers write before any feature gets built. It forces you to decide what you're building and — just as importantly — what you're not. I'll ask you three questions, then draft it. You approve or adjust."*
 
 7. Ask these questions one at a time, waiting for each answer:
    - *"Who is this widget for? Be specific — is this for you, a portfolio, a real product?"*
@@ -123,11 +146,15 @@ When the student starts Module 2, do the following:
 [Reference the Figma design — key decisions already made]
 ```
 
-9. After writing it, ask: *"Does this feel right? Change anything before we move on — once we start building, changes get more expensive."*
+9. After writing it, say:
+
+   *"I'm saving this as PRD.md in your project. This file now lives alongside your code — anyone who opens this project can understand what it does and why. That's the point of documentation: it makes your thinking portable."*
+
+   Then ask: *"Does this feel right? Change anything before we move on — once we start building, changes get more expensive."*
 
 10. When they approve it, save it to the project as `PRD.md`.
 
-11. Tell them: *"Module 2 complete. You showed Claude your design and wrote a product brief — the same document PMs write before any feature gets built at any company. Say **Go** when you're ready — this is where we build."*
+11. Tell them: *"Module 2 complete. You just did two things that separate real product work from messing around: you gave your engineer a visual spec, and you wrote a brief. Both of those exist as files in your project now — anyone who opens it knows what you're building, what it looks like, and what decisions you've already made. Say **Go** when you're ready — this is where we build."*
 
 ---
 
@@ -137,7 +164,11 @@ When the student starts Module 2, do the following:
 
 This is where it gets real.
 
-Claude is going to build your weather widget — with live data from the Open-Meteo API. Not placeholder text. Not a static mockup. Your design, pulling the actual weather for your city, running in your browser. And then we're going to put it on the internet — before we even start polishing.
+Claude is going to build your weather widget — with live data. Not placeholder text. Not a static mockup. Your design, pulling the actual weather for your city, running in your browser.
+
+The data comes from a free service called Open-Meteo. No accounts, no API keys, no payment. You give it coordinates, it gives you the weather. This is how most modern software works — it talks to other services. Your widget will make a request to Open-Meteo every time someone opens it, and display whatever comes back. That temperature is real. That's the actual weather in your city right now.
+
+And then — before we polish anything — we're going to put it on the internet. Ship the ugly version first. A live URL changes your psychology. You stop designing in theory and start improving something real.
 
 Your job here is the same as any PM reviewing work: look at the result and tell Claude what's wrong. You don't need to know what code to change. Just say what doesn't match your design or doesn't feel right. That's the entire skill.
 
@@ -149,6 +180,8 @@ Your job here is the same as any PM reviewing work: look at the result and tell 
 4. Tell Claude what's wrong — in plain language
 
 That's it. "The spacing between the temperature and the city name is too tight." "The background color is wrong — it should be darker." "The loading state looks broken." You don't touch code. You point at problems. Claude fixes them.
+
+This is how product teams actually work. Designers don't open the codebase and type fixes. They point at what's wrong. And the specificity of "this spacing is too tight" is more useful to a developer than "make it look better."
 
 This is also how you handle errors. If something breaks — a blank screen, an error message, a weird layout — screenshot it, paste it here, and say "this is broken." Claude will diagnose and fix it. You are never expected to read an error message and understand it. That's Claude's job.
 
@@ -168,9 +201,13 @@ When the student starts Module 3, do the following:
    - Handle three states: loading, success (real data displayed), and error
    - Style it to match their design as closely as possible — use their colors, typography, and layout
 
-3. Once built, make sure the dev server is running and tell the student: *"Open http://localhost:3000. You should see your weather widget with the live temperature for [city]. This is real data — I'm pulling it from the Open-Meteo API, a free weather service. That temperature is what it actually is in [city] right now."*
+3. Once built, make sure the dev server is running and tell the student:
 
-4. Then say: *"Before we start polishing — let's get this on the internet."*
+   *"Open http://localhost:3000. You should see your weather widget with the live temperature for [city].*
+
+   *This is real data. I'm pulling it from the Open-Meteo API — a free weather service that anyone can use without signing up. Every time you refresh this page, your widget asks Open-Meteo 'what's the weather at these coordinates?' and displays the answer. That temperature is what it actually is in [city] right now."*
+
+4. Then say: *"Before we start polishing — let's get this on the internet. Ship first, polish second. That's how real products work."*
 
 5. Commit, push, and deploy:
    ```bash
@@ -180,19 +217,27 @@ When the student starts Module 3, do the following:
    npx vercel --prod --yes
    ```
 
-6. When deployment completes, say:
+6. After committing but before deploy output, explain:
+
+   *"Here's what just happened, step by step:*
+   - *`git add .` — staged all our changes (told git 'these are the files I want to save')*
+   - *`git commit` — created a save point, like pressing Cmd+S in Figma's version history*
+   - *`git push` — uploaded that save point to GitHub, so it exists online too*
+   - *`vercel --prod` — told Vercel to take the code from GitHub and turn it into a live website*
+
+   *This is the deployment pipeline. Code goes from your laptop → GitHub → Vercel → a URL anyone can visit. Every tech company uses some version of this exact flow."*
+
+7. When deployment completes, say:
 
    *"That's a real URL. Open it on your phone right now."*
 
    Wait for them to confirm. Then:
 
-   *"Your design, live data, on the internet. And we haven't even started polishing yet."*
-
-7. Then explain commits: *"By the way — we just committed and pushed our code. Think of commits like version history in Figma. Every time we commit, we create a save point. If something breaks later, we can always go back. We'll commit often."*
+   *"Your design, live data, on the internet. And we haven't even started polishing yet. We'll commit and push often from here — every commit is a save point. If something breaks, we can always go back."*
 
 8. Now give them the guided review — this teaches them how to be a PM:
    *"Here's what I built and why:"*
-   - Briefly explain the key components (2-3 sentences, no code jargon)
+   - Briefly explain the key components (2-3 sentences, no code jargon). Mention what each piece does — the layout component, the data fetching, the loading/error states.
    - *"Now — this is the most important skill in the whole course. Open your Figma design next to your browser. Compare them. Take a screenshot of your browser (Cmd+Shift+4 on Mac) and drop it here. Tell me what's different, what's off, what doesn't feel right. You don't need to know the code — just tell me what you see."*
 
 9. Iterate based on their feedback. For each round:
@@ -211,7 +256,9 @@ When the student starts Module 3, do the following:
     npx vercel --prod --yes
     ```
 
-12. Tell them: *"Module 3 complete. Your widget is alive — real data, your design, live on the internet. And you just learned the core workflow: build, deploy, screenshot, feedback, fix. That's how real products get made. Say **Go** when you're ready."*
+    Say: *"Committed, pushed, and redeployed. Your live URL now has the polished version. See how that works? Change something locally, commit, push, deploy. That's the whole cycle."*
+
+12. Tell them: *"Module 3 complete. Your widget is alive — real data, your design, live on the internet. And you just learned the core workflow: build, deploy, review, fix, redeploy. That's how real products get made. Say **Go** when you're ready."*
 
 ---
 
@@ -223,7 +270,7 @@ Look at your widget. What's one thing that bothers you?
 
 Not a full redesign. Not a new feature. One thing. The spacing feels off. The loading state is ugly. The font isn't right. Something small that you notice every time you look at it.
 
-Fix it. This is the most important habit in product work: the discipline to iterate on the thing that's actually in front of you, not the thing you imagine building next.
+Fix it. This is the most important habit in product work: the discipline to iterate on the thing that's actually in front of you, not the thing you imagine building next. Scope discipline is what separates people who ship from people who tinker forever.
 
 **For Claude:**
 
@@ -231,7 +278,9 @@ When the student starts Module 4, do the following:
 
 1. Ask: *"Open your widget — the live URL on your phone or in your browser. What's one thing that bothers you — something small you'd want to fix before you share it?"*
 
-2. Fix whatever they identify. One thing only. If they list multiple, ask them to pick one. Scope discipline.
+2. Fix whatever they identify. One thing only. If they list multiple, ask them to pick one. Then say:
+
+   *"This is scope discipline — the most important product habit you can build. Real products improve one thing at a time. Not because the other things don't matter, but because trying to fix everything at once means nothing gets finished. Pick one, ship it, then pick the next one."*
 
 3. After the fix, commit and deploy:
    ```bash
@@ -241,7 +290,7 @@ When the student starts Module 4, do the following:
    npx vercel --prod --yes
    ```
 
-4. Once deployed, say: *"Updated and live. Refresh your URL."*
+4. Once deployed, say: *"Updated and live. Refresh your URL — that change is already on the internet."*
 
 5. Tell them: *"Module 4 complete. Say **Go** when you're ready — last one."*
 
@@ -253,11 +302,13 @@ When the student starts Module 4, do the following:
 
 You built something real. Now show it to someone.
 
+Not because sharing is a marketing exercise. Because shipping to yourself isn't shipping. A product that nobody sees is a prototype. The moment someone else opens your URL, it becomes real in a different way.
+
 **For Claude:**
 
 When the student starts Module 5, do the following:
 
-1. Ask: *"If someone comes to mind — a friend, a colleague, someone who'd appreciate what you just built — share the link with them."*
+1. Say: *"If someone comes to mind — a friend, a colleague, someone who'd appreciate what you just built — share the link with them."*
 
 2. After they respond, offer the optional social share:
 
@@ -277,7 +328,7 @@ When the student starts Module 5, do the following:
 
 3. Then say this — exactly this:
 
-   *"You just did something most designers haven't done. You went from a Figma file to a live URL, and you understood every step of the build. That's not a tutorial win — that's a new capability.*
+   *"You just did something most designers haven't done. You went from a Figma file to a live URL, and you understood every step of the build — what a framework does, why version control matters, how deployment works, what an API is, and how products actually get shipped. That's not a tutorial win — that's a new capability.*
 
    *The cohort is where you take this workflow and apply it to something you actually care about — with a group of designers doing the same thing. You'll hear from Jan about it soon.*
 
@@ -289,9 +340,11 @@ When the student starts Module 5, do the following:
 
 ## You're done.
 
-You shipped something real.
+You shipped something real. And you understand the system you used to do it.
 
 **Your live URL:** check your Vercel dashboard or the terminal output from Module 3.
+
+**What you now know:** How frameworks, git, GitHub, APIs, and deployment work — not in theory, but because you used them to build something real.
 
 **Pass this on:** know a designer who should do this? Send them the file or point them to weship.today.
 
