@@ -20,7 +20,7 @@ mkdir claude-code-for-designers && cd claude-code-for-designers && curl -O https
 1. **Your First Conversation** — Scaffold a project without writing code
 2. **Your Design, Your Brief** — Drop your Figma screenshot and write the PRD
 3. **Build It** — Live weather data, your design, deployed to a real URL
-4. **Polish** — Fix the one thing that bothers you
+4. **Keep Building** — Add something new, on your own terms
 5. **Share** — Send it to someone who'd appreciate it
 
 ## Built by

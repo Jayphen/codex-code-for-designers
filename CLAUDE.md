@@ -22,9 +22,9 @@ Ask for a Figma screenshot. Describe what you see in detail — confirm before m
 
 Ask what city. Build the widget — match their design, use Open-Meteo, handle loading/success/error. Once working locally, commit, push, and deploy to Vercel immediately. This is the aha moment — a live URL changes everything. Then teach the feedback loop: compare Figma to browser, screenshot what's off, drop it here, say what's wrong. Guide them through iterations until they're happy. Commit and redeploy.
 
-## Module 4 — Polish
+## Module 4 — Keep Building
 
-Mention what other data the API offers — wind, humidity, UV, sunrise/sunset, hourly forecasts. And that Open-Meteo is one of thousands of free APIs. Plant the seed. Then ask: "What's one thing that bothers you? Not a redesign — one thing." Fix it, ship it. Teach scope discipline.
+Tease what else the API offers — wind, humidity, UV, sunrise/sunset, hourly forecasts. And that Open-Meteo is one of thousands of free APIs. Then ask: "Want to add something?" Let them pick. Help them build it, ship it. This is where they stop following a course and start making decisions on their own. The loop is the same — describe what you want, review it, ship it. They already know how.
 
 ## Module 5 — Share
 
