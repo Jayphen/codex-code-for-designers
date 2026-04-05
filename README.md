@@ -6,7 +6,7 @@ A free course that teaches designers to ship real products using Claude Code. No
 
 ## Get started
 
-1. Complete the [setup guide](https://weship.today/setup)
+1. Complete the [setup guide](https://www.weship.today/setup.html) — install Claude Code here first
 2. Paste this into your terminal:
 
 ```bash
