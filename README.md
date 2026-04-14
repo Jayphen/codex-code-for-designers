@@ -1,19 +1,21 @@
-# Claude Code for Designers
+# Codex for Designers
 
-A free course that teaches designers to ship real products using Claude Code. No coding required.
+A free course that teaches designers to ship real products using Codex. No coding required.
 
 **What you'll build:** A weather widget with live data, your Figma design, deployed to a real URL.
 
 ## Get started
 
-1. Complete the [setup guide](https://www.weship.today/setup.html) — install Claude Code here first
+1. Complete the [setup guide](https://www.weship.today/setup.html) and install Codex first
 2. Paste this into your terminal:
 
 ```bash
-mkdir claude-code-for-designers && cd claude-code-for-designers && curl -O https://raw.githubusercontent.com/janhaaland/claude-code-for-designers/main/CLAUDE.md && claude
+mkdir codex-for-designers && cd codex-for-designers && curl -O https://raw.githubusercontent.com/Jayphen/codex-code-for-designers/main/AGENTS.md && codex
 ```
 
 3. Say: **"Go"**
+
+Codex reads `AGENTS.md` automatically, so that file acts as the course brain.
 
 ## Course modules
 
