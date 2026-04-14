@@ -2,6 +2,10 @@
 
 A free course that teaches designers to ship real products using Codex. No coding required.
 
+This repo is just a Codex-accessible clone of [janhaaland/claude-code-for-designers](https://github.com/janhaaland/claude-code-for-designers) for learners who have Codex access instead of Claude access.
+
+Nothing else was changed. Full credit goes to the original creator.
+
 **What you'll build:** A weather widget with live data, your Figma design, deployed to a real URL.
 
 ## Get started
